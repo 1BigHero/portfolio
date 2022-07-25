@@ -1,0 +1,82 @@
+<!doctype html>
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title> Videos </title>
+		<style type="text/css">
+
+		   *{
+             box-sizing: border-box;
+             margin: 0;
+             padding: 0;
+		    }
+
+		    .container {
+		   	width: 100%;
+		   	height: 100vh;
+		   	overflow: hidden;
+		   	position: relative;
+		    }
+
+		    .container video {
+		   	position: absolute;
+		   	left: 0;
+		   	top: 0;
+		   	z-index: -1;
+		    }
+
+		    @media (min-aspect-ratio: 16/9) {
+		    	.container video {
+		   		  width: 100%;
+		   		  height: auto;
+		    	}
+
+		   	@media (max-aspect-ratio: 16/9) {
+		   		.container video {
+		   			width: auto;
+		   			height: 100%;
+		   		}
+		   	}
+
+		   	 .container ul {
+		   	 	display: flex;
+		   	 	justify-content: space-between;
+		   	 	position: absolute;
+		   	 	top: 0;
+		   	 	right: 0;
+		   	 }
+
+		   	 .container ul li {
+		   	 	list-style-type: none;
+		   	 	margin: 0.2rem;
+		   	 	padding: 1rem;
+		   	 }
+
+		   	 .container ul li a {
+		   	 	text-decoration: none;
+		   	 	color: whitesmoke;
+		   	 	font-size: 25px;
+		   	 	font-weight: bold;
+		   	 }
+		   }
+
+		   </style>
+	</head>
+	<body>
+		<div class="container">
+			<video autoplay loop muted>
+				<source src="videos/2.mp4" type="video/mp4">
+			</video>
+
+			<ul>
+				<li><a href="#"> Home </a></li>
+				<li><a href="#"> About Us </a></li>
+				<li><a href="#"> Location </a></li>
+				<li><a href="#"> Services </a></li>
+			</ul>
+		</div>
+	
+	</body>
+	</html>
